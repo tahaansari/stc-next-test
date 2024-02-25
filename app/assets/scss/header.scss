@@ -1,0 +1,88 @@
+@import 'node_modules/bootstrap/scss/functions';
+@import 'node_modules/bootstrap/scss/variables';
+@import 'node_modules/bootstrap/scss/mixins';
+
+@import "./variables";
+
+.header{
+    &__topbar{
+        background-color: $color-light-pink;
+    }
+    &__topbar-nav-link{
+        font-family: $font-bold;
+        text-transform: uppercase;
+        color: $color-black;
+        font-size: 1rem;
+        opacity: .7;
+        padding: 1rem;
+        &--active{
+            background-color: $color-white;
+            color: $color-pink;
+        }
+        @include media-breakpoint-up(lg){
+            font-size: 1.4rem;
+            padding: 1rem  2rem;
+        }
+    }
+    &__topbar-right-link{
+        font-family: $font-bold;
+        text-transform: uppercase;
+        color: $color-black;
+        font-size: 1rem;
+        opacity: .7;
+        padding: 1rem 0;
+        @include media-breakpoint-up(lg){
+            font-size: 1.4rem;
+        }
+    }
+    
+    &__navbar{
+        padding: 0;
+    }
+    &__logo{
+        width: 5rem;
+        @include media-breakpoint-up(lg){
+            width: auto;
+            margin-right: 2rem;
+        }
+    }
+    &__nav-ul{
+        padding-top: 2rem;
+        @include media-breakpoint-up(lg) {
+            padding-top: 0;
+        }
+    }
+    &__navbar-item{
+        padding: 1rem 0;
+        font-size: 1.3rem;
+    }
+    .nav-item{
+        @include media-breakpoint-up(lg) {
+            padding: 0rem 1rem;
+        }
+    }
+    &__navbar-right{
+        display: flex;
+        align-items: center;
+        margin-right: 1rem;
+        @include media-breakpoint-up(lg){
+            margin-right: 0;
+        }
+    }
+    &__navbar-icon{
+        display: inline-block;
+        padding: 1rem;
+        @include media-breakpoint-up(lg){
+            padding: 2rem;
+        }
+    }
+    &__navbar-login{
+        font-family: $font-bold;
+        text-transform: uppercase;
+        display: inline-block;
+        color: $color-pink;
+        padding: 1rem;
+        font-size: 1.4rem;
+    }
+    
+}

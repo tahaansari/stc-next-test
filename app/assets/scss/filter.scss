@@ -1,0 +1,46 @@
+@import 'node_modules/bootstrap/scss/functions';
+@import 'node_modules/bootstrap/scss/variables';
+@import 'node_modules/bootstrap/scss/mixins';
+@import "variables";
+
+.filter{
+    padding: 2rem 0;
+    padding-top: 10rem;
+    @include media-breakpoint-up(lg){
+        padding: 4rem 0;
+        padding-top: 14rem;
+    }
+    &__btn{
+        text-align: left;
+        padding: 1rem;
+        border: 1px solid $color-purple;
+        font-size: 1.4rem;
+        @include media-breakpoint-up(lg){
+            font-size: 1.6rem;
+            padding: 1.5rem;
+        }
+        &:after{
+            content: "";
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        &--category{
+            width: 15rem;
+            @include media-breakpoint-up(lg){
+                width: 40rem;
+            }
+        }
+        &--sort{
+            width: 15rem;
+            @include media-breakpoint-up(lg){
+                width: 17rem;
+            }
+        }
+    }
+    .dropdown-menu.show{
+        width: 100%;
+        font-size: 1.6rem;
+    }
+}

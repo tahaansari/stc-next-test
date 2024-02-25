@@ -1,0 +1,119 @@
+@import 'node_modules/bootstrap/scss/functions';
+@import 'node_modules/bootstrap/scss/variables';
+@import 'node_modules/bootstrap/scss/mixins';
+@import "./variables";
+
+.productList{
+    position: relative;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    @include media-breakpoint-up(md){
+        padding-top: 2rem;
+        padding-bottom: 10rem;
+    }
+    &__card{
+        border-radius: 2rem;
+        box-shadow: 0 8px 30px -8px rgba(29,37,45,.3);
+        padding: 3rem;
+        margin-left: 2rem;
+        margin-right: 2rem;
+        border: none;
+        height: 100%;
+        @include media-breakpoint-up(md){
+            margin-left: 0;
+            margin-right: 0;
+        }
+    }
+    &__col{
+        padding-top: 5rem;
+        padding-bottom: 2rem;
+        @include media-breakpoint-up(md){
+            padding-top: 8rem;
+        }
+    }
+    &__offer{
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%,-100%);
+        background: $color-pink;
+        color: $color-white;
+        font-family: $font-bold;
+        padding: 1rem 2rem;
+        white-space: nowrap;
+        width: 80%;
+        border-top-left-radius: 2rem;
+        border-top-right-radius: 2rem;
+    }
+    &__brand{
+        font-family: $font-medium;
+        text-transform: uppercase;
+        
+        margin-bottom: 1rem;
+        display: inline-block;
+    }
+    &__name{
+        margin-bottom: 2rem;
+    }
+    &__starting-from{
+        
+        margin-bottom: 1rem;
+    }
+    &__price-box{
+        
+        margin-bottom: 2rem;
+    }
+    &__full-price{
+        margin-left: .4rem;
+        &--linethrough{
+            color: $color-pink;
+            text-decoration: line-through;
+        }
+    }
+    &__big-price{
+        font-size: 2.8rem;
+    padding: 0.2rem;
+    }
+    &__btn{
+        font-family: $font-medium;
+        width: 100%;
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem;
+        border-color: $color-pink;
+        color: $color-pink;
+        font-size: 1.4rem;
+        &:hover{
+            border-color: $color-pink;
+            background-color: $color-pink;
+        }
+        &:active{
+            border-color: $color-pink;
+            background-color: $color-pink;
+        }
+    }
+    &__price{
+        margin-bottom: 1rem;
+        &-currency{
+            font-family: $font-light;
+            top: -1.2rem;
+        }
+        &-period{
+            font-family: $font-light;
+            left: -2rem;
+        }
+        &-paise{
+            top: -1.2rem;
+        }
+    }
+    &__img{
+        @include media-breakpoint-up(md){
+            height: 22rem;
+            object-fit: cover;
+        }
+    }
+    .btn-check:checked+.btn, .btn.active, .btn.show, .btn:first-child:active, :not(.btn-check)+.btn:active{
+        border-color: $color-pink;
+                background-color: $color-pink;
+    }
+}
+
