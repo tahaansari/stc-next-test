@@ -1,4 +1,3 @@
-import React from "react";
 import tag from "../assets/images/tag.svg";
 import "../assets/scss/productList.scss";
 

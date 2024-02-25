@@ -1,9 +1,6 @@
-import React from "react";
 import Image from "next/image";
 import logo from "../assets/images/logo.svg";
-import '../assets/scss/header.scss'
-
-
+import "../assets/scss/header.scss";
 
 export default function header() {
   return (
@@ -45,10 +42,7 @@ export default function header() {
       <nav className="header__navbar navbar navbar-expand-lg navbar-light bg-white border-bottom">
         <div className="container">
           <a className="navbar-brand py-0" href="javascript:void(0)">
-            <Image
-      src={logo}
-      alt="STC logo"
-    />
+            <Image src={logo} alt="STC logo" />
           </a>
 
           <div className="d-flex align-items-center">

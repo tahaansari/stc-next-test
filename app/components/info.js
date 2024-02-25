@@ -1,4 +1,3 @@
-import React from "react";
 import "../assets/scss/info.scss";
 
 export default function info() {

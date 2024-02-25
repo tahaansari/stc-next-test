@@ -1,13 +1,10 @@
-"use client"
-import React, { useEffect, useState } from "react";
 import { Inter } from "next/font/google";
-import 'bootstrap/dist/css/bootstrap.css'
-import 'bootstrap-icons/font/bootstrap-icons.css'
-import './assets/scss/global.scss'
+import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap-icons/font/bootstrap-icons.css";
+import "./assets/scss/global.scss";
+
 import Header from "./components/header";
 import Footer from "./components/footer";
-import Filter from "./components/filter";
-
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -17,56 +14,11 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
-
-  const url = "https://mocki.io/v1/ae832675-0711-48a0-8665-a186cd0e8489";
-  const [data, setData] = useState([]);
-  const [filterData, setFilterData] = useState([]);
-  const fetchData = () => {
-    return fetch(url)
-      .then((res) => res.json())
-      .then((res) => {
-        setData(res.devices);
-        setFilterData(res.devices);
-      });
-  };
-
-  useEffect(() => {
-    fetchData();
-  }, []);
-
-  const categoryChange = (category) => {
-    if (category != "Show All") {
-      setFilterData(data.filter((item) => item.category === category));
-    } else {
-      setFilterData(data);
-    }
-  };
-
-  const sortChange = (sortBy) => {
-    if (sortBy == "A-Z") {
-      const sorted = [...filterData].sort((a, b) =>
-        a.name.toLowerCase() > b.name.toLowerCase() ? 1 : b.name.toLowerCase() > a.name.toLowerCase() ? -1 : 0
-      );
-      setFilterData(sorted);
-    } else {
-      const sorted = [...filterData]
-        .sort((a, b) =>
-          a.name.toLowerCase() > b.name.toLowerCase() ? 1 : b.name.toLowerCase() > a.name.toLowerCase() ? -1 : 0
-        )
-        .reverse();
-      setFilterData(sorted);
-    }
-  };
-
-
   return (
     <html lang="en">
       <body className={inter.className}>
         <Header></Header>
-          <Filter categoryChange={categoryChange} sortChange={sortChange}></Filter>
-          {/* <ProductList filterData={filterData}></ProductList> */}
-          {/* <Info></Info> */}
-          {children}
+        {children}
         <Footer></Footer>
       </body>
     </html>

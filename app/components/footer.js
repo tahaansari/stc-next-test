@@ -1,6 +1,7 @@
 import React from "react";
 import "../assets/scss/footer.scss";
 import logo from "../assets/images/logo-white.svg";
+import Image from "next/image";
 
 export default function footer() {
   return (
@@ -9,7 +10,7 @@ export default function footer() {
         <div className="row align-items-center">
           <div className="col-12 col-lg-1">
             <a href="javascript:void(0)">
-              <img className="footer__logo" src={logo} alt="" />
+              <Image src={logo}></Image>
             </a>
           </div>
           <div className="col-12 col-lg-5 order-3 order-lg-2">

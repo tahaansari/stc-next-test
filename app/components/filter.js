@@ -1,4 +1,3 @@
-import React from "react";
 import "../assets/scss/filter.scss";
 
 export default function filter(props) {
