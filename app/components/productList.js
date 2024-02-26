@@ -20,7 +20,7 @@ export default function productList(props) {
                     <h2 className="productList__name">{item.name}</h2>
                   </div>
                   <div className="">
-                    <img className="productList__img img-fluid" src={item.img} alt="" />
+                    <Image className="productList__img img-fluid"  src={item.img} alt="" />
                   </div>
                   <span className="productList__starting-from">Started from</span>
                   <div className="productList__price">
@@ -34,7 +34,7 @@ export default function productList(props) {
 
                   {item.discount_price != "" ? (
                     <p className="productList__price-box">
-                      <img className="me-2" src={tag} alt="" />
+                      <Image className="me-2" src={tag} />
                       Full price:
                       {item.full_price != "" ? (
                         <span className="productList__full-price productList__full-price--linethrough ms-2">
@@ -52,7 +52,7 @@ export default function productList(props) {
                     </p>
                   ) : (
                     <p className="productList__price-box">
-                      <img className="me-2" src={tag} alt="" />
+                      <Iimage className="me-2" src={tag} alt="" />
                       Full price:
                       {item.full_price != "" ? (
                         <strong className="productList__full-price">{item.full_price} BD </strong>
