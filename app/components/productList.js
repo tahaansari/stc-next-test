@@ -1,16 +1,17 @@
+import Link from "next/link";
+import Image from "next/image";
 import tag from "../assets/images/tag.svg";
 import "../assets/scss/productList.scss";
 
-export default function productList(props) {
+export default function productList({ filterData }) {
   return (
     <div className="productList">
       <div className="container">
         <div className="row">
-          {props.filterData.map((item, index) => {
+          {filterData.map((item, index) => {
             let price = item.price;
             var digits = price.toString().split(".");
-            // var realDigits = digits.map(Number);
-            // console.log(realDigits);
+
             return (
               <div key={index} className="productList__col col-12 col-md-6 col-lg-4">
                 <div className="productList__card card text-center shadow-lg">
@@ -20,7 +21,14 @@ export default function productList(props) {
                     <h2 className="productList__name">{item.name}</h2>
                   </div>
                   <div className="">
-                    <Image className="productList__img img-fluid"  src={item.img} alt="" />
+                    <Image
+                      loader={() => item.img}
+                      className="productList__img img-fluid"
+                      src={item.img}
+                      alt="Product Image"
+                      width={500}
+                      height={500}
+                    />
                   </div>
                   <span className="productList__starting-from">Started from</span>
                   <div className="productList__price">
@@ -34,7 +42,7 @@ export default function productList(props) {
 
                   {item.discount_price != "" ? (
                     <p className="productList__price-box">
-                      <Image className="me-2" src={tag} />
+                      <Image className="me-2" src={tag} alt="Product Price" />
                       Full price:
                       {item.full_price != "" ? (
                         <span className="productList__full-price productList__full-price--linethrough ms-2">
@@ -52,7 +60,7 @@ export default function productList(props) {
                     </p>
                   ) : (
                     <p className="productList__price-box">
-                      <Iimage className="me-2" src={tag} alt="" />
+                      <Image className="me-2" src={tag} alt="Product Image" />
                       Full price:
                       {item.full_price != "" ? (
                         <strong className="productList__full-price">{item.full_price} BD </strong>
@@ -63,9 +71,9 @@ export default function productList(props) {
                     </p>
                   )}
 
-                  <a href="#" className="productList__btn btn btn-outline-primary">
+                  <Link href="/" className="productList__btn btn btn-outline-primary">
                     {item.cta}
-                  </a>
+                  </Link>
                 </div>
               </div>
             );

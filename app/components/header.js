@@ -1,6 +1,7 @@
 import Image from "next/image";
 import logo from "../assets/images/logo.svg";
 import "../assets/scss/header.scss";
+import Link from "next/link";
 
 export default function header() {
   return (
@@ -10,30 +11,30 @@ export default function header() {
           <div className="d-flex justify-content-between">
             <ul className="nav">
               <li className="nav-item">
-                <a
+                <Link
                   className="nav-link header__topbar-nav-link header__topbar-nav-link--active"
                   aria-current="page"
-                  href="javascript:void(0)"
+                  href="/"
                 >
                   Personal
-                </a>
+                </Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link header__topbar-nav-link" href="javascript:void(0)">
+                <Link className="nav-link header__topbar-nav-link" href="/">
                   Business
-                </a>
+                </Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link header__topbar-nav-link" href="javascript:void(0)">
+                <Link className="nav-link header__topbar-nav-link" href="/">
                   Wholesale
-                </a>
+                </Link>
               </li>
             </ul>
             <ul className="nav d-none d-lg-block">
               <li className="nav-item">
-                <a className="nav-link header__topbar-right-link" aria-current="page" href="javascript:void(0)">
+                <Link className="nav-link header__topbar-right-link" aria-current="page" href="/">
                   Quickpay & Recharge
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -41,26 +42,26 @@ export default function header() {
       </div>
       <nav className="header__navbar navbar navbar-expand-lg navbar-light bg-white border-bottom">
         <div className="container">
-          <a className="navbar-brand py-0" href="javascript:void(0)">
-            <Image src={logo} alt="STC logo" />
-          </a>
+          <Link className="navbar-brand py-0" href="/">
+            <Image width={100} height={100} src={logo} alt="STC logo" priority="false" />
+          </Link>
 
           <div className="d-flex align-items-center">
             <div className="header__navbar-right d-lg-none">
               <div>
-                <a className="header__navbar-icon border-start border-end" href="#">
+                <Link className="header__navbar-icon border-start border-end" href="/">
                   <i className="bi bi-search"></i>
-                </a>
+                </Link>
               </div>
               <div>
-                <a className="header__navbar-icon border-end" href="#">
+                <Link className="header__navbar-icon border-end" href="/">
                   <i className="bi bi-cart3"></i>
-                </a>
+                </Link>
               </div>
               <div>
-                <a className="header__navbar-login" href="#">
+                <Link className="header__navbar-login" href="/">
                   <span className="ms-4">Login</span> <i className="ms-3 bi bi-arrow-right-square"></i>
-                </a>
+                </Link>
               </div>
             </div>
 
@@ -80,61 +81,61 @@ export default function header() {
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="header__nav-ul navbar-nav me-auto mb-2 mb-lg-0">
               <li className="nav-item">
-                <a className="nav-link header__navbar-item" href="javascript:void(0)">
+                <Link className="nav-link header__navbar-item" href="/">
                   Deals
-                </a>
+                </Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link header__navbar-item" href="javascript:void(0)">
+                <Link className="nav-link header__navbar-item" href="/">
                   Devices
-                </a>
+                </Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link header__navbar-item" href="javascript:void(0)">
+                <Link className="nav-link header__navbar-item" href="/">
                   Mobile
-                </a>
+                </Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link header__navbar-item" href="javascript:void(0)">
+                <Link className="nav-link header__navbar-item" href="/">
                   Internet
-                </a>
+                </Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link header__navbar-item" href="javascript:void(0)">
+                <Link className="nav-link header__navbar-item" href="/">
                   Gaming
-                </a>
+                </Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link header__navbar-item" href="javascript:void(0)">
+                <Link className="nav-link header__navbar-item" href="/">
                   Entertainment
-                </a>
+                </Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link header__navbar-item" href="javascript:void(0)">
+                <Link className="nav-link header__navbar-item" href="/">
                   Sales & Support
-                </a>
+                </Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link header__navbar-item" href="javascript:void(0)">
+                <Link className="nav-link header__navbar-item" href="/">
                   5G
-                </a>
+                </Link>
               </li>
             </ul>
             <div className="header__navbar-right d-none d-lg-flex">
               <div>
-                <a className="header__navbar-icon border-start border-end" href="#">
+                <Link className="header__navbar-icon border-start border-end" href="/">
                   <i className="bi bi-search"></i>
-                </a>
+                </Link>
               </div>
               <div>
-                <a className="header__navbar-icon border-end" href="#">
+                <Link className="header__navbar-icon border-end" href="/">
                   <i className="bi bi-cart3"></i>
-                </a>
+                </Link>
               </div>
               <div>
-                <a className="header__navbar-login" href="#">
+                <Link className="header__navbar-login" href="/">
                   <span className="ms-4">Login</span> <i className="ms-3 bi bi-arrow-right-square"></i>
-                </a>
+                </Link>
               </div>
             </div>
           </div>
